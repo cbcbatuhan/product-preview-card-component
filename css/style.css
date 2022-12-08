@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Fraunces", serif;
+}
+html {
+  font-size: 65%;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+main {
+  min-height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+main .box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 60rem;
+}
+.mobile-img {
+  display: none;
+}
+
+main .box-left img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+main .box-right {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main .box-right .catalog-title p {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.4rem;
+  font-size: 1rem;
+  color: hsl(228, 12%, 48%);
+}
+
+main .box-right .product-title h1 {
+  font-size: 3.5rem;
+  line-height: 0.9;
+
+  color: hsl(212, 21%, 14%);
+}
+
+main .box-right .product-desc p {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+}
+
+main .box-right .price {
+  font-size: 2.7rem;
+  display: flex;
+  align-items: center;
+  color: hsl(158, 36%, 37%);
+}
+main .box-right .old-price {
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: hsl(158, 36%, 37%);
+  padding: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+button img {
+  margin-right: 1.5rem;
+}
+
+button:hover {
+  background-color: hsl(158, 36%, 22%);
+}
+
+.attribution {
+    font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  text-align: center;
+  
+}
+.attribution a {
+    text-decoration: none;
+  color: hsl(158, 36%, 37%);
+}
+
+@media screen and (max-width: 600px) {
+  main .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .box-left img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+
+  .mobile-img img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  main .box-right .product-title {
+    margin: 1.6rem 0;
+  }
+
+  main .box-right .product-desc {
+    margin-bottom: 2rem;
+  }
+
+  main .price {
+    margin-bottom: 1.5rem;
+  }
+  main .price .old-price {
+    font-size: 1.1rem;
+  }
+}
